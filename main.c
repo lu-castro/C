@@ -249,4 +249,19 @@ int votos(void)
 }
 
 
+/* forma de reemplazar los condicionales */
+
+int operadores_condicionales(void)
+{
+  int x = 3;
+
+  x>10?printf("X es mayor a 10") : 
+  printf("10 es mayor a X");
+  
+}
+
+
+
+
+
 
