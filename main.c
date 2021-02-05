@@ -271,8 +271,86 @@ char condicionales(void)
       else{
         VerProducto();
       }
-
 }
+
+/*si hay muchos if la funcion andará más lenta porque tendrá que pasar por cada uno de ellos hasta encontrar el necesario. Para eso se utiliza switch()*/
+
+/* switch() recibe la variable que analizará */
+
+char Pedidos(void)
+{
+  char z;
+  printf("Ingrese una letra\n");
+  printf("A - Ingresar nuevo producto\n");
+  printf("B - Ingresar nuevo pedido\n");
+  printf("C - Ingresar nueva preferencia\n");
+  printf("D - Ingresar nueva mercancía\n");
+  printf("E - Ingresar nueva postal\n");
+
+  switch (z)
+  {
+  case 'a':
+    IngresarProducto();
+    break;
+  case 'b':
+    IngresarPedido();
+    break;
+  case 'c':
+    IngresarPreferencia();
+    break;
+  case 'd':
+    IngresarMercancía();
+    break;
+  case 'e':
+    IngresarPostal();
+    break;
+
+  default:
+  printf("por favor, ingrese una de las opciones dadas");
+    break;
+  }
+}
+
+
+
+int while_sth(void)
+{
+  int x;
+  printf("insert number %d", x);
+  x = getch();
+  while (x < 12)
+  {
+    printf("%d", x);
+    x++; 
+  }
+}
+
+/*la funcion do-while dice: "hacé esto hasta que pase esto otro" */
+
+int do_while_ins(void)
+{
+  int i = 1;
+  do
+  {
+    i++;
+  } while (i<100);
+}
+
+int for_ins(void)
+{
+  int i;
+  for (i = 0; i < 100; i++)
+  {
+    printf("%d\t%c\n", i, i); /*acá aclaramos que se utilizarán los valor de la ASCII*/
+  }
+}
+
+
+/*Salir, continuar y saltar*/
+
+
+
+
 
 
 
