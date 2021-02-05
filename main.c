@@ -260,6 +260,23 @@ int operadores_condicionales(void)
   
 }
 
+/* condicionales */
+
+char condicionales(void)
+{
+  char z;
+  z = getch();
+  if (z=='a')
+      IngresarProducto();
+      else{
+        VerProducto();
+      }
+
+}
+
+
+
+
 
 
 
