@@ -345,6 +345,105 @@ int for_ins(void)
   }
 }
 
+/* punteros */
+
+#include <stdio.h>
+
+int punteros(void)
+{
+  int* a;
+  char* b;
+  unsigned long* c;
+  float d;
+  unsigned int* e;
+
+  printf("Este es el espacio que ocupa la variable a: %d\n", sizeof a );
+  printf("Este es el espacio que ocupa la variable b: %d\n", sizeof b );
+  printf("Este es el espacio que ocupa la variable c: %d\n", sizeof c );
+  printf("Este es el espacio que ocupa la variable d: %d\n", sizeof d );
+  printf("Este es el espacio que ocupa la variable e: %d\n", sizeof e );
+}
+
+
+int punteros_2(void)
+{
+  int a;
+  int* p;
+  p = &a;  /* primero hay que declarar que la variable tiene una dirección de memoria para asignarle uno */ 
+
+  printf("El valor izquierdo de p es %d", &a);
+  printf("El valor derecho de p es %d, o sea, si mismo", p);
+}
+
+
+int punteros_3(void)
+{
+  int a = 0; 
+  int* p;
+  p = &a;
+
+  printf("la dirección difiere del contenido. Dirección = %d  Contenido = %d", &a, a);
+
+  *p /* ó la variable a, ya que *p significa asignación */ = 7; /* se toma el segundo valor */
+  printf("Dirección y contenido de *p. Dirección = %d  Contenido = %d", &a, a);  
+}
+
+int punteros_4_asig(void)
+{
+  int a;
+  int* p;
+  char* q;
+
+  p = &a;
+  q = (char*)p;  /* es incorrecto decir q = p */  
+
+  printf("p tiene esta dirección: %p y este contenido: %p", &p, p); 
+  printf("q tiene esta dirección: %p y este contenido: %p", &q, q); 
+}
+
+int punteros_5_aritmetica(void)
+{
+  float* p;
+  p = (float*) 0x2000; 
+  /* int i;  
+
+  for (i == p; i < 10; i++)
+  {
+    printf("valor de p: %f", i);
+    i++; 
+  } */ 
+
+  printf("el valor de p es: %f", p);
+  printf("el valor de p más uno es: %f", p++);
+  printf("el valor de p más dos es: %f", p+2);
+}
+
+
+int punteros_6_diferencia(void)
+{
+  int a,b,c; 
+  int* p, * q;
+  p = &a;
+  q = &c;
+
+  printf("La dirección de la variable a es: %p\n", p);
+  printf("La dirección de la variable c es: %p", q);
+}
+
+
+char punteros_7_apunteros(void)
+{
+  char q = "C";
+  char** p; /* ó *(*p) */ 
+
+  p = &q;
+  printf("imprímeme la dirección de char** p: %p", &q);
+}
+
+
+
+
+
 
 
 
