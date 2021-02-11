@@ -346,8 +346,6 @@ int for_ins(void)
 }
 
 
-/*Salir, continuar y saltar*/
-
 
 
 
