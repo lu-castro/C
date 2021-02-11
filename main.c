@@ -441,6 +441,38 @@ char punteros_7_apunteros(void)
 }
 
 
+/* vectores: variables comunes que se definen por su subíndice */
+
+#include <stdio.h>
+
+int vectores(void)
+{
+  int sensor[22];
+  int i;
+  int valor_inicial = 0;
+
+  for (i = 0; i < 22; i++)
+  {
+    sensor[i] = valor_inicial;
+    printf("El elemento sensor[%d] va a tener un valor inicial en %d", i, sensor[i]);
+  }
+}
+
+int vectores_2(void)
+{
+  float sensor[3];
+  float* p;
+  p = &sensor[0];
+
+  printf("El valor de p está guardada en sensor[0]: %p\n", p);
+  printf("La dirección de inicio del vector es: %p", sensor);
+  printf("La dirección de sensor[1] es: %p", sensor+1);
+  printf("La dirección de sensor[2] es: %p", sensor+2);
+}
+
+
+/* los vectores se ordenan por comparación de mayor a menor */ 
+
 
 
 
