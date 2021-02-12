@@ -471,7 +471,100 @@ int vectores_2(void)
 }
 
 
-/* los vectores se ordenan por comparación de mayor a menor */ 
+/* los vectores se ordenan por comparación de mayor a menor */
+
+int vectores_3(void)
+{
+  int i, j, a[20], AUX; /* el AUX tiene la función de mover la posición de los valores si en la comparación uno resulta mayor que otro*/
+
+  for (i = 0; i < (20-1); i++)
+  {
+    for (j = i+1; j < 20; j++)
+    {
+      if (a[i]>a[j])
+      {
+        AUX = a[i];
+        a[i] = a[j];
+        a[j] = AUX; 
+      }
+    
+    }
+    
+  }
+
+}
+
+
+
+int vectores_4_dowhile(void)
+{
+  int j, i, cambio, pasada, AUX;
+  int a[5] = {6, 3, 9 ,0, 1};
+
+  printf("Vector Desordenando:\n");
+  for (i = 0; i < 5; i++)
+  {
+    printf("a[%d] = %d\n", i, a[i]);
+  }
+  
+  pasada = 0;
+  do
+  {
+    cambio = 0;
+    pasada++;
+    for (i = 0; i < (5-pasada); i++)
+    {
+      if (a[i] > a[i+1])
+      {
+        AUX = a[i];
+        a[i] = a[j];
+        a[j] = AUX;
+        cambio = 1;
+      }
+      
+    }
+    
+  } while (cambio);
+  
+  printf("Vector Ordenado:\n");
+  for (i = 0; i < 5; i++)
+  {
+    printf("a[%d] = %d\n, i a[i]");
+  }
+  
+}
+
+
+
+int vectores_5_busqueda(void)
+{
+  int i, dato, N, encontrado;
+  int vec[8] = {8, 9, 7, 3, 5, 7, 2, 1};
+  dato = 22;
+  N = 8;
+  encontrado = 0; 
+
+
+  for (i = 0; i < N; i++)
+  {
+    if (dato==vec[i])
+    {
+      printf("El elemento %d se encuentra en la posición %d", dato, i);
+      encontrado = 1;
+      break;
+    }
+    
+  }
+  
+  if (!encontrado)
+  {
+    printf("El elemnto %d no fue encontrado", dato);
+  }
+  
+}
+
+
+
 
 
 
